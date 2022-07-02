@@ -1,0 +1,65 @@
+[
+    {
+        "Id" : "1",
+        "Descripcion" : "Logitech TKL G915",
+        "Stock" : 23,
+        "Precio" : "189990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/82384/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "2",
+        "Descripcion" : "Logitech G513 Carbon Español GX",
+        "Stock" : 10,
+        "Precio" : "89990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/86059/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "3",
+        "Descripcion" : "Mouse Logitech G403",
+        "Stock" : 15,
+        "Precio" : "26990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/67699/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "4",
+        "Descripcion" : "Mouse Logitech G502 Hero",
+        "Stock" : 12,
+        "Precio" : "32990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/51795/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "5",
+        "Descripcion" : "Mouse Logitech G502 Lightspeed",
+        "Stock" : 5,
+        "Precio" : "69990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/51795/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "6",
+        "Descripcion" : "Parlantes Logitech G560",
+        "Stock" : 30,
+        "Precio" : "279990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/51810/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "7",
+        "Descripcion" : "Audifonos Logitech G435 White",
+        "Stock" : 20,
+        "Precio" : "62990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/126338/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "8",
+        "Descripcion" : "Audifonos Logitech G533 Wireless 7.1 - Negro",
+        "Stock" : 8,
+        "Precio" : "80990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/72794/picture/?width=375&height=375"
+    },
+    {
+        "Id" : "9",
+        "Descripcion" : "Audifonos Logitech G533 Wireless 7.1 - White",
+        "Stock" : 20,
+        "Precio" : "80990",
+        "UrlImagen" : "https://publicapi.solotodo.com/products/72794/picture/?width=375&height=375"
+    }
+]
