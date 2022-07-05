@@ -5,7 +5,7 @@ import React from "react";
 // titulo.className = "card"
 
 
-export default function Navbar() {
+export default function Navbar({ toggleCarro }) {
     return <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Carro App React</a>
@@ -16,7 +16,8 @@ export default function Navbar() {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
             </div>
             <div>
-                <a className="btn btn-outline-success"><i className="fa-solid fa-cart-shopping"></i></a>
+                <a onClick={ toggleCarro }
+                className="btn btn-outline-success"><i className="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
     </nav>

@@ -1,19 +1,28 @@
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Products from './data.json'
+import Productos from './data.json'
 import Product from './components/Product';
+import Carro from './components/Carro'
 
 function App() {
-    console.log(Products)
+
+    const [Visible, setVisible] = React.useState(false)
+
+    const toggleVisible = () => {
+        setVisible(!Visible)
+    }
+
+
+    //console.log(Productos)
     return (
         <div>
-            <Navbar/>
-
+            <Navbar toggleCarro={toggleVisible}/>
+            <Carro Visible={Visible} toggleCarro={toggleVisible} />
             <div className='row justify-content-center'>
-              { Products.map(element => <Product Producto={ element } />) }
+              { Productos.map(element => <Product key={ element.Id } Producto={ element } />) }
+               
             </div>
-
-
         </div>
     );
 }
