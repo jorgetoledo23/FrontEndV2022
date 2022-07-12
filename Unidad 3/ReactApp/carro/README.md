@@ -1,3 +1,7 @@
+# Solucionar Problema de Scripts no se reconoce como un comando
+npm install react-scripts --save
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
