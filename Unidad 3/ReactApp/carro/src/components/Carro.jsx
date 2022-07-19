@@ -1,6 +1,7 @@
 import React from "react";
+import CarroItem from "./CarroItem";
 
-export default function Carro({Visible, toggleCarro}) {
+export default function Carro({Visible, toggleCarro, ItemsCarro}) {
 
     const CarroStyles = {
         width: Visible ? '100%' : '0px',
@@ -24,11 +25,25 @@ export default function Carro({Visible, toggleCarro}) {
 
 
     return <div style={CarroStyles}>
+
         <span onClick={toggleCarro}
             style={BtnCloseStyles}>
             <i className="fa-solid fa-xmark"></i>
         </span>
 
+        <div style={ {display : Visible ? 'block' : 'none'} }>
+            <div className="text-center"><h1>Carro de Compras</h1></div>
+
+
+            { ItemsCarro.map(item =>
+                <CarroItem key={item.Producto.Id} Item={item} />
+                )}
+            {/* <CarroItem />
+            <CarroItem />
+            <CarroItem /> */}
+            
+        </div>
+        
 
     </div>
 }

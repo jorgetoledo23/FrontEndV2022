@@ -5,7 +5,7 @@ var CLFormat = new Intl.NumberFormat('es-CL', {
     currency: 'CLP',
 });
 
-export default function Product({ Producto }) {
+export default function Product({ Producto, AddToCart, toggleCarro }) {
     //console.log(props)
     return <div className="card col-md-3 m-2 p- text-center">
         <div className="card-body">
@@ -14,7 +14,8 @@ export default function Product({ Producto }) {
             src={ Producto.UrlImagen }/>
             <p>Precio: <strong>{ CLFormat.format(Producto.Precio) }</strong></p>
             <p>Stock: <strong>{ Producto.Stock}</strong></p>
-            <button className="btn btn-outline-success">Add to Cart</button>
+            <button onClick={ () => (AddToCart(Producto), toggleCarro())  }
+             className="btn btn-outline-success">Add to Cart</button>
         </div>
     </div>
 }
