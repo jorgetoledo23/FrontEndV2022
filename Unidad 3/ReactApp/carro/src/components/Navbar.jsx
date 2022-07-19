@@ -4,14 +4,21 @@ import React from "react";
 // titulo.innerHtml = "Hola Mundo"
 // titulo.className = "card"
 
+var CLFormat = new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP',
+});
 
-export default function Navbar({ toggleCarro }) {
+export default function Navbar({ toggleCarro, Total }) {
     return <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Carro App React</a>
             <div>
                 <a onClick={ toggleCarro }
-                className="btn btn-outline-success"><i className="fa-solid fa-cart-shopping"></i></a>
+                className="btn btn-outline-success">
+                    
+                <i className="fa-solid fa-cart-shopping"></i>
+                {CLFormat.format(Total)}</a>
             </div>
         </div>
     </nav>

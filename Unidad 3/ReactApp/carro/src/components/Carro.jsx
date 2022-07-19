@@ -1,7 +1,19 @@
 import React from "react";
 import CarroItem from "./CarroItem";
 
-export default function Carro({Visible, toggleCarro, ItemsCarro}) {
+
+var CLFormat = new Intl.NumberFormat('es-CL', {
+    style: 'currency',
+    currency: 'CLP'
+});
+
+export default function Carro({
+    Visible,
+    toggleCarro,
+    ItemsCarro,
+    FuncionEliminarDelCarro,
+    Total
+}) {
 
     const CarroStyles = {
         width: Visible ? '100%' : '0px',
@@ -31,19 +43,32 @@ export default function Carro({Visible, toggleCarro, ItemsCarro}) {
             <i className="fa-solid fa-xmark"></i>
         </span>
 
-        <div style={ {display : Visible ? 'block' : 'none'} }>
-            <div className="text-center"><h1>Carro de Compras</h1></div>
+        <div style={
+            {
+                display: Visible ? 'block' : 'none'
+            }
+        }>
+            <div className="text-center">
+                <h1>Carro de Compras</h1>
+                <p>Total:
+                    <strong>{
+                        CLFormat.format(Total)
+                    }</strong>
+                </p>
+            </div>
+
+            <div style={{overflow : 'scroll', height : '80vh' }}> {
+                ItemsCarro.map(item => <CarroItem key={
+                        item.Producto.Id
+                    }
+                    Item={item}
+                    FuncionEliminarDelCarro={FuncionEliminarDelCarro}/>)
+            } 
+            </div>
 
 
-            { ItemsCarro.map(item =>
-                <CarroItem key={item.Producto.Id} Item={item} />
-                )}
-            {/* <CarroItem />
-            <CarroItem />
-            <CarroItem /> */}
-            
         </div>
-        
+
 
     </div>
 }
